@@ -4,96 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            background: rgb(108, 189, 212);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 400px;
-        }
-        h2 {
-            text-align: center;
-        }
-        .todo-input {
-            display: flex;
-            gap: 10px;
-        }
-        .todo-input input {
-            flex: 1;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .todo-input button {
-            background: #040a05;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .todo-list {
-            margin-top: 20px;
-            display: grid;
-            gap: 10px;
-        }
-        .todo-item {
-            background: #fff;
-            padding: 10px;
-            border-radius: 5px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border: 1px solid #ddd;
-        }
-        .todo-item button {
-            background: #dc3545;
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h2>To-Do List</h2>
-        <div class="todo-input">
-            <input type="text" id="taskInput" placeholder="Add a new task...">
-            <button onclick="addTask()">Add</button>
-        </div>
-        <div class="todo-list" id="todoList"></div>
-    </div>
+    <h1>To-Do List</h1>
+    
+    <input type="text" id="taskInput" placeholder="Enter a task">
+    <button onclick="addTask()">Add</button>
 
-    <script>
-        function addTask() {
-            const taskInput = document.getElementById("taskInput");
-            const taskText = taskInput.value.trim();
-            if (taskText === "") return;
-            
-            const taskList = document.getElementById("todoList");
-            const taskItem = document.createElement("div");
-            taskItem.className = "todo-item";
-            taskItem.innerHTML = `
-                <span>${taskText}</span>
-                <button onclick="this.parentElement.remove()">Delete</button>
-            `;
-            
-            taskList.appendChild(taskItem);
-            taskInput.value = "";
-        }
-    </script>
+    <ul id="taskList"></ul>
+
+    <script src="script.js"></script>
 </body>
 </html>
