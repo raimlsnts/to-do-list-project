@@ -1,22 +1,22 @@
 {
-  "name": "public",
+  "name": "task-5-march-14-2025",
   "version": "1.0.0",
-  "description": "My name is Raiza B. Milosantos, and I am a 4th year student at Bulacan Agricultural State College (BASC), pursuing a degree in Bachelor of Science in Information Technology.\r 23 years old\r I live in San Miguel Bulacan.",
-  "main": "script.js",
+  "description": "",
+  "main": "db.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/raimlsnts/intership-project.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/raimlsnts/intership-project/issues"
-  },
-  "homepage": "https://github.com/raimlsnts/intership-project#readme"
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.13.0"
+  }
 }
